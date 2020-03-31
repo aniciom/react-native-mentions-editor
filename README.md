@@ -9,6 +9,9 @@ Mentions TextInput for React Native. Tested on iOS and should work on Android as
 or
 ```npm install --save react-native-mentions-editor```
 
+```
+If you love this component, give a star, you will be a ray of sunshine :)
+```
 
 ## Demo
 
@@ -69,8 +72,8 @@ this.props.onChange({
 `text` Will have formatted text with some markup to parse mentions on the server and other clients. There is a function called `displayTextWithMentions` you can use this function to parse this mark-up with the parser function (Which format the mention node according to formatter function. Check the example app). 
 
 If you want to only parse mentions in the string but don't want to format them you can use this `EditorUtils.findMentions` function to actually parse the mentions in the string. 
-This will parse special mark `@[username](id:1)` and gives you the exact `positions` and `username` and `id` for that mention. Which you can use for tagging / emailing purposes on the server etc.
-You can use this function by importing: 
+This will parse special mark-up `@[username](id:1)` and gives you the exact `positions` and `username` and `id` for that mention. Which you can use for tagging / emailing purposes on the server etc.
+You can use this function as: 
 
 
 ```js
@@ -105,7 +108,7 @@ findMentions: (val) => {
 
 **`list: array`** This should be the list of objects to be used as options for the mentions list. **Note** This must contain `id` and `username` properties to uniqely identify object in the list. 
 
-**`initialValue: string`** Use this to initialize TextInput with the initial value. 
+**`initialValue: string`** Use this to initialize TextInput with the initial value. Usage. `initalValue: "Hey @[mrazadar](id:1) this is good work"`
 
 **`clearInput: bool`** When true input will be clear automatically. 
 
@@ -119,7 +122,7 @@ findMentions: (val) => {
 
 **`onHideMentions: function`** This callback will be called when user stop tracking of mention. 
 
-**`placholder: string`** Placholder for empty input. 
+**`placeholder: string`** placeholder for empty input. 
 
 **`renderMentionList: function`** If you want to render totally different list. You can use this property to provide alternative mention list renderer. It will be called with certain properties to controll the functionality of list.
 
